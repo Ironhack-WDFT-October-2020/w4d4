@@ -12,6 +12,12 @@ app.get('/', (req, res) => {
     res.render('movies', { moviesList: movies })
 });
 
+app.get('/godfather', (req, res) => {
+    const godfather = movies.find(movie => movie.title === 'The Godfather');
+    console.log(godfather);
+    res.render('movieDetails', { clickedMovie: godfather });
+})
+
 app.get('/onemovie', (req, res) => {
     res.render('onemovie')
 });
