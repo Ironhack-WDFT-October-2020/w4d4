@@ -76,6 +76,10 @@ const userSchema = mongoose.Schema({
     },
     hobbies: [String],
     address: Object,
+    address2: {
+        street: String,
+        zip: String
+    },
     role: {
         type: String,
         enum: ['user', 'admin'],
