@@ -1,0 +1,13 @@
+<div class="movie-card">
+    <img src="{{poster}}" alt="Poster for {{title}}">
+    <div class="movie-details">
+        <h3>{{title}} {{year}}</h3>
+        <p>Directed by: {{director}}</p>
+        <p>Duration: {{duration}}</p>
+        <p>Rating: {{rate}}</p>
+        <p>Genre: {{#each genre}} 
+            <span>{{ this }}</span>
+            {{/each}}
+        </p>
+    </div>
+</div>
